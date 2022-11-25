@@ -1,44 +1,39 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-
-
-<title>20221125</title>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+	<head>
+	<meta charset="utf-8">
+	<title>20221125</title>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 	<style type="text/css">
-		body,
-div,
-video {
-margin: 0;
-padding: 0;
+body, div, video {
+	margin: 0;
+	padding: 0;
 }
-html,
-body {
-height: 100%;
+html, body {
+	height: 100%;
 }
 .video {
-position: fixed;
-top: 50%;
-left: 50%;
-z-index: 1;
-min-width: 100%;
-min-height: 100%;
-width: auto;
-height: auto;
--webkit-transform: translate(-50%, -50%);
--ms-transform: translate(-50%,, -50%);
-transform: translate(-50%, -50%);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%,, -50%);
+	transform: translate(-50%, -50%);
 }
 .panel-cover {
-position: fixed;
-background-image: url(cover.jpg);
-z-index: 2;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-width: 100%;
-height: 100%;
+	position: fixed;
+	background-image: url(cover.jpg);
+	z-index: 2;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
 }
 (function() {
 function playVideo(video) {
@@ -52,31 +47,34 @@ var video = document.querySelector("#background-video");
 video.addEventListener("canplay", function() {
 playVideo(video);
 }, false);
-if (video.readyState &gt; 3) {
+if (video.readyState &gt;
+3) {
 playVideo(video);
 }
 }
-})();
-		
-	class Helper {
-    public static function isMobile() {
-        if (preg_match("/(iPhone|iPod|Android|ios|iPad)/i", $_SERVER['HTTP_USER_AGENT'])) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }
-	</style>
-	
-
+)();
+class Helper {
+ public static function isMobile() {
+ if (preg_match("/(iPhone|iPod|Android|ios|iPad)/i", $_SERVER['HTTP_USER_AGENT'])) {
+ return true;
+}
+else {
+ return false;
+}
+}
+}
+</style>
 </head>
 
-<body>
-<video width="934" height="1659" id="homeVideo" poster="dKCg8DV.jpg_720x1279.png" preload="auto" controls="controls" autoplay="autoplay" loop="loop" >
-  <source src="dKCg8DV.mp4" type="video/mp4">
-</video>
+<body background="dKCg8DV.jpg_720x1279.png"
+ 
+               style="background-repeat:no-repeat;
+               background-attachment:fixed;
+               background-size:100% 100%; ">
+<video width="934" height="1659" id="homeVideo" poster="dKCg8DV.jpg_500x888.png" preload="auto" controls="controls" autoplay="autoplay" loop="loop" >
+      <source src="dKCg8DV.mp4" type="video/mp4">
+    </video>
 <script>document.getElementById('homeVideo').play();</script>
-
 </body>
 </html>
