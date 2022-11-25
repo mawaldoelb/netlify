@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+<title>20221125</title>
+
+	<style type="text/css">
+	class Helper {
+    public static function isMobile() {
+        if (preg_match("/(iPhone|iPod|Android|ios|iPad)/i", $_SERVER['HTTP_USER_AGENT'])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+	</style>
+	
+
+</head>
+
+<body>
+	    <?php if(!Helper::isMobile()) { ?>
+<video  id="homeVideo" preload="auto" controls="controls" autoplay="autoplay" loop="loop" >
+  <source src="dKCg8DV.mp4" type="video/mp4">
+</video>
+    <?php } ?>
+	<figure>这是布局标签的内容<figcaption>这是布局图标签的题注</figcaption></figure>
+
+<script>document.getElementById('homeVideo').play();</script>
+
+</body>
+</html>
